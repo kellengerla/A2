@@ -22,8 +22,13 @@ public class GameRunnerTests {
     @Test
     void test_isGoodInput_tooLong()
     {
+        //Arrange
         GameRunner testGameRunner = new GameRunner();
-        assertFalse(testGameRunner.isGoodInput("begins"), "Used word <begins>. Result should have been true.");
+        String toCheck = "begins";
+        //Act
+        boolean test_result = testGameRunner.isGoodInput(toCheck);
+        //Assert
+        assertFalse(test_result, "Used word <begins>. Result should have been true.");
     }
 
     // TODO: Create a test for a word that is too short. Use the Arrange, Act, Assert pattern
