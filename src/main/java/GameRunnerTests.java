@@ -71,6 +71,15 @@ public class GameRunnerTests {
         //Assert
         assertTrue(test_result, "Used word <hello>. Result should have been true");
     }
-
+    @Test
+    void test_isEnglishAndFiveLetters_DifferentCases() {
+        //Arrange
+        GameRunner testGameRunner = new GameRunner();
+        String toCheck = "Hello";
+        //Act
+        boolean test_result = testGameRunner.isEnglishAndFiveLetters(toCheck);
+        //Assert
+        assertTrue(test_result, "Used word <Hello>. Result should have been true");
+    }
 }
 
