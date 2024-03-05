@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
 
 import java.util.HashSet;
 import java.util.Scanner;
@@ -17,7 +15,7 @@ public class GameRunner {
     {
         // A note: pre-setting the initial capacity of the HashSet to approximately the right size
         // should make populating the HashSet a bit faster.
-        validWords = new HashSet<String>(5800);
+        validWords = new HashSet<>(5800);
         try
         {
             FileReader fReader = new FileReader("sgb-words.txt");
@@ -94,7 +92,7 @@ public class GameRunner {
 
     public boolean isEnglishAndFiveLetters(String toCheck)
     {
-        return validWords.contains(toCheck);
+        return validWords.contains(toCheck.toLowerCase()) && (toCheck.length() == 5);
     }
 
 
