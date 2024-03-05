@@ -35,7 +35,7 @@ public class GameRunnerTests {
         GameRunner testGameRunner = new GameRunner();
         String toCheck = "beg1n";
         boolean test_result = testGameRunner.isGoodInput(toCheck);
-        assertTrue(test_result, "Used word <beg1n>. Result should have been false.");
+        assertFalse(test_result, "Used word <beg1n>. Result should have been false.");
     }
 
 
