@@ -32,14 +32,29 @@ public class GameRunnerTests {
     }
 
     // TODO: Create a test for a word that is too short. Use the Arrange, Act, Assert pattern
+    @Test
+    void test_isGoodInput_tooShort()
+    {
+        //Arrange
+        GameRunner testGameRunner = new GameRunner();
+        String toCheck = "star";
+        //Act
+        boolean test_result = testGameRunner.isGoodInput(toCheck);
+        //Assert
+        assertFalse(test_result, "Used word <star>. Result should have been false");
+    }
+
 
     // TODO: Fix this.
     @Test
     void test_isGoodInput_notAlpha()
     {
+        //Arrange
         GameRunner testGameRunner = new GameRunner();
         String toCheck = "beg1n";
+        //Act
         boolean test_result = testGameRunner.isGoodInput(toCheck);
+        //Assert
         assertFalse(test_result, "Used word <beg1n>. Result should have been false.");
     }
 
