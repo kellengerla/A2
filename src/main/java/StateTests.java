@@ -39,7 +39,16 @@ public class StateTests {
         assertEquals(5, state.getSecretWord().length());
     }
     // Test State(String) here
-
+    @Test
+    void test_State_inputSecretWord()
+    {
+        //Arrange
+        String inputWord = "SHARK";
+        //Act
+        State state = new State(inputWord);
+        //Assert
+        assertEquals(inputWord, state.getSecretWord());
+    }
     // Test updateState() here
     @Test
     void test_State_updateSecretWord()
@@ -47,7 +56,7 @@ public class StateTests {
         //Arrange
         State state = new State();
         //Act
-        state.updateState("HELLO"); //This is an attempt to change the secret word
+        state.updateState("SHARK"); //This is an attempt to change the secret word
         //Assert
         assertEquals("START", state.getSecretWord());
     }

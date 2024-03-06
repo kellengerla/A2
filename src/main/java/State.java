@@ -26,14 +26,13 @@ public class State {
     }
     public State(String inputWord)
     {
-        secretWord = new String(inputWord);
+        secretWord = inputWord;
         letterStatus = new int[WORD_LENGTH];
         for (int i = 0; i < WORD_LENGTH;i++)
         {
             letterStatus[i] = NO_MATCH;
         }
     }
-
     public void updateState(String newGuess)
     {
         for (int i = 0; i < WORD_LENGTH; i++) {
@@ -45,7 +44,6 @@ public class State {
 
         }
     }
-
     public boolean hasWin()
     {
         boolean winState = true;
