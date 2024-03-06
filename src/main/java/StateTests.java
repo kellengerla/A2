@@ -30,6 +30,14 @@ public class StateTests {
         int [] expectedLetterStatus = {0,0,0,0,0}; //All elements should be equal to 0, i.e. NO_MATCH
         assertArrayEquals(expectedLetterStatus, state.getLetterStatus());
     }
+    @Test
+    public void testWordLength() {
+        // Arrange
+        State state = new State();
+        // Act --> No action needed
+        // Assert
+        assertEquals(5, state.getSecretWord().length());
+    }
     // Test State(String) here
 
     // Test updateState() here
