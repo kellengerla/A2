@@ -25,7 +25,7 @@ public class StateTests {
     {
         //Arrange
         State state = new State();
-        //Act -->  No action needed
+        //Act --> No action needed
         //Assert
         int [] expectedLetterStatus = {0,0,0,0,0}; //All elements should be equal to 0, i.e. NO_MATCH
         assertArrayEquals(expectedLetterStatus, state.getLetterStatus());
