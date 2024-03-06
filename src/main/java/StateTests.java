@@ -40,7 +40,7 @@ public class StateTests {
     }
     // Test State(String) here
     @Test
-    void test_State_inputSecretWord()
+    void test_StateString_inputSecretWord()
     {
         //Arrange
         String inputWord = "SHARK";
@@ -51,7 +51,7 @@ public class StateTests {
     }
     // Test updateState() here
     @Test
-    void test_State_updateSecretWord()
+    void test_UpdateState_updateSecretWord()
     {
         //Arrange
         State state = new State();
