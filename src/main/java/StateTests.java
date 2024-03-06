@@ -20,7 +20,16 @@ public class StateTests {
         //Assert
         assertEquals("START", state.getSecretWord());
     }
-
+    @Test
+    void test_State_letterMatchStatus()
+    {
+        //Arrange
+        State state = new State();
+        //Act --> No action needed
+        //Assert
+        int [] expectedLetterStatus = {0,0,0,0,0}; //All elements should be equal to 0, i.e. NO_MATCH
+        assertArrayEquals(expectedLetterStatus, state.getLetterStatus());
+    }
     // Test State(String) here
 
     // Test updateState() here
