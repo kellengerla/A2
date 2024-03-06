@@ -13,7 +13,7 @@ public class State {
 
     public State()
     {
-         secretWord = new String(DEFAULT_WORD);
+         secretWord = DEFAULT_WORD;
          letterStatus = new int[WORD_LENGTH];
          for (int i = 0; i < WORD_LENGTH;i++)
          {
