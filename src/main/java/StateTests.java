@@ -31,17 +31,26 @@ public class StateTests {
         assertArrayEquals(expectedLetterStatus, state.getLetterStatus());
     }
     @Test
-    public void test_State_secretWordLength() {
-        // Arrange
+    void test_State_secretWordLength() {
+        //Arrange
         State state = new State();
-        // Act --> No action needed
-        // Assert
+        //Act --> No action needed
+        //Assert
         assertEquals(5, state.getSecretWord().length());
     }
     // Test State(String) here
 
     // Test updateState() here
-
+    @Test
+    void test_State_updateSecretWord()
+    {
+        //Arrange
+        State state = new State();
+        //Act
+        state.updateState("HELLO"); //This is an attempt to change the secret word
+        //Assert
+        assertEquals("START", state.getSecretWord());
+    }
     // Test hasWin() here
 
     // Test toString here
