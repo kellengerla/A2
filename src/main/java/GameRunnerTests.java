@@ -89,7 +89,7 @@ public class GameRunnerTests {
         //Act
         boolean test_result = testGameRunner.isEnglishAndFiveLetters(toCheck);
         //Assert
-        assertFalse(test_result, "Used word <gerla>. Result should have been false");
+        assertFalse(test_result, "Used word <gerla>. Result should have been true");
     }
     @Test
     void test_isEnglishAndFiveLetters_NonEnglish() {
