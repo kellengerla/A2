@@ -25,6 +25,9 @@ public class State {
         return secretWord;
     }
 
+    public int [] getLetterStatus(){
+        return letterStatus;
+    }
     public State(String inputWord)
     {
         secretWord = new String(inputWord);
