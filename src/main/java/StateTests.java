@@ -11,7 +11,15 @@ public class StateTests {
     // Build test cases which test each constructor and each class method
 
     // Test default constructor here
-
+    @Test
+    void test_State_defaultWordIntialization()
+    {
+        //Arrange
+        State state = new State();
+        //Act --> No action needed
+        //Assert
+        assertEquals("START", state.getSecretWord());
+    }
 
     // Test State(String) here
 
