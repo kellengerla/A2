@@ -95,7 +95,7 @@ public class GameRunnerTests {
     void test_isEnglishAndFiveLetters_NonEnglish() {
         //Arrange
         GameRunner testGameRunner = new GameRunner();
-        String toCheck = "jolie";
+        String toCheck = "jolie";//"jolie" means happy in French
         //Act
         boolean test_result = testGameRunner.isEnglishAndFiveLetters(toCheck);
         //Assert
