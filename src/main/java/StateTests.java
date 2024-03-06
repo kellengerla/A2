@@ -31,7 +31,7 @@ public class StateTests {
         assertArrayEquals(expectedLetterStatus, state.getLetterStatus());
     }
     @Test
-    public void testWordLength() {
+    public void test_State_secretWordLength() {
         // Arrange
         State state = new State();
         // Act --> No action needed
