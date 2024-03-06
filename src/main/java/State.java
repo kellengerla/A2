@@ -2,15 +2,13 @@ import java.util.*;
 
 public class State {
 
-    private String secretWord;
-    private int[] letterStatus;
+    private final String secretWord;
+    private final int[] letterStatus;
     private final int WORD_LENGTH = 5;
     private final String DEFAULT_WORD = "START";
-
     private final int NO_MATCH = 0;
     private final int IN_WORD = 1;
     private final int EXACT_MATCH = 2;
-
     public State()
     {
          secretWord = DEFAULT_WORD;
@@ -19,12 +17,10 @@ public class State {
          {
              letterStatus[i] = NO_MATCH;
          }
-
     }
     public String getSecretWord(){
         return secretWord;
     }
-
     public int [] getLetterStatus(){
         return letterStatus;
     }
