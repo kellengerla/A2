@@ -21,6 +21,9 @@ public class State {
          }
 
     }
+    public String getSecretWord(){
+        return secretWord;
+    }
 
     public State(String inputWord)
     {
