@@ -49,6 +49,17 @@ public class StateTests {
         //Assert
         assertEquals(inputWord, state.getSecretWord());
     }
+    @Test
+    void test_StateString_inputWordLetterStatus()
+    {
+        //Arrange
+        String inputWord = "SHARK";
+        //Act
+        State state = new State(inputWord);
+        //Assert
+        int [] expectedInputWordStatus = {0,0,0,0,0}; //All elements should be equal to 0, i.e. NO_MATCH
+        assertArrayEquals(expectedInputWordStatus, state.getLetterStatus());
+    }
     // Test updateState() here
     @Test
     void test_UpdateState_updateSecretWord()
