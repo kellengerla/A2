@@ -2,7 +2,7 @@ import java.util.*;
 
 public class State {
 
-    private String secretWord;
+    public String secretWord;
     private int[] letterStatus;
     private final int WORD_LENGTH = 5;
     private final String DEFAULT_WORD = "START";
@@ -21,7 +21,9 @@ public class State {
          }
 
     }
-
+    public String getSecretWord() {
+        return secretWord;
+    }
     public State(String inputWord)
     {
         secretWord = new String(inputWord);
