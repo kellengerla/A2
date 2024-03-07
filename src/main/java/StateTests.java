@@ -79,7 +79,17 @@ public class StateTests {
         //Act
         state.updateState("JOLLY"); //Jolly should have no correct letters in it when compared to the variable DEFAULT_WORD which is START
         //Assert
-        assertArrayEquals(new int []{0,0,0,0,0}, state.getLetterStatus());
+        assertArrayEquals(new int [] {0,0,0,0,0}, state.getLetterStatus());
+    }
+    @Test
+    void test_UpdateState_inputWordPartialMatch1()
+    {
+        //Arrange
+        State state = new State();
+        //Act
+        state.updateState("STRAY");
+        //Assert
+        assertArrayEquals(new int [] {2,2,1,1,0}, state.getLetterStatus());
     }
     // Test hasWin() here
 
