@@ -112,6 +112,16 @@ public class StateTests {
         assertArrayEquals(new int [] {2,2,2,2,2}, state.getLetterStatus());
     }
     // Test hasWin() here
-
+    @Test
+    void test_HasWin_ExactMatch()
+    {
+        //Arrange
+        State state = new State();
+        state.updateState("START");
+        //Act
+        boolean hasWin = state.hasWin();
+        //Assert
+        assertTrue(hasWin);
+    }
     // Test toString here
 }
