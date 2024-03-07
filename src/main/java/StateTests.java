@@ -212,4 +212,15 @@ public class StateTests {
         //Assert
         assertEquals("State{secretWord='SHARK', letterStatus=[0, 0, 0, 0, 0]}", stateString);
     }
+    @Test
+    void test_toString_customStateAfterGuessPartialMatch()
+    {
+        //Arrange
+        State state = new State("SHARK");
+        state.updateState("STRAY");
+        //Act
+        String stateString = state.toString();
+        //Assert
+        assertEquals("State{secretWord='SHARK', letterStatus=[2, 0, 1, 1, 0]}", stateString);
+    }
 }
