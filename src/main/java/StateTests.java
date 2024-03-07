@@ -223,4 +223,15 @@ public class StateTests {
         //Assert
         assertEquals("State{secretWord='SHARK', letterStatus=[2, 0, 1, 1, 0]}", stateString);
     }
+    @Test
+    void test_toString_customStateAfterGuessExactMatch()
+    {
+        //Arrange
+        State state = new State("SHARK");
+        state.updateState("SHARK");
+        //Act
+        String stateString = state.toString();
+        //Assert
+        assertEquals("State{secretWord='SHARK', letterStatus=[2, 2, 2, 2, 2]}", stateString);
+    }
 }
