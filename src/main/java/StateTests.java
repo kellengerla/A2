@@ -2,6 +2,8 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
+import javax.swing.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
@@ -133,6 +135,17 @@ public class StateTests {
         boolean hasWin = state.hasWin();
         //Assert
         assertFalse(hasWin);
+    }
+    @Test
+    void test_HasWin_NoMatch()
+    {
+       //Arrange
+       State state = new State();
+       state.updateState("JOLLY");
+       //Act
+       boolean hasWin = state.hasWin();
+       //Assert
+       assertFalse(hasWin);
     }
     // Test toString here
 }
