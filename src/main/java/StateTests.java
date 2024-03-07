@@ -123,5 +123,16 @@ public class StateTests {
         //Assert
         assertTrue(hasWin);
     }
+    @Test
+    void test_HasWin_PartialMatch()
+    {
+        //Arrange
+        State state = new State();
+        state.updateState("HEART");
+        //Act
+        boolean hasWin = state.hasWin();
+        //Assert
+        assertFalse(hasWin);
+    }
     // Test toString here
 }
