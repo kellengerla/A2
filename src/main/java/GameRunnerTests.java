@@ -8,11 +8,11 @@ public class GameRunnerTests {
     {
         // Arrange
         GameRunner testGameRunner = new GameRunner();
-        String toCheck = "begin";
+        String toCheck = "BEGIN";
         // Act
         boolean test_result = testGameRunner.isGoodInput(toCheck);
         // Assert
-        assertTrue(test_result, "Used word <begin>. Result should have been true.");
+        assertTrue(test_result, "Used word <BEGIN>. Result should have been true.");
     }
     // TODO: Rewrite using the Arrange/Act/Assert pattern
     @Test
@@ -20,11 +20,11 @@ public class GameRunnerTests {
     {
         //Arrange
         GameRunner testGameRunner = new GameRunner();
-        String toCheck = "begins";
+        String toCheck = "BEGINS";
         //Act
         boolean test_result = testGameRunner.isGoodInput(toCheck);
         //Assert
-        assertFalse(test_result, "Used word <begins>. Result should have been true.");
+        assertFalse(test_result, "Used word <BEGINS>. Result should have been true.");
     }
     // TODO: Create a test for a word that is too short. Use the Arrange, Act, Assert pattern
     @Test
@@ -32,11 +32,11 @@ public class GameRunnerTests {
     {
         //Arrange
         GameRunner testGameRunner = new GameRunner();
-        String toCheck = "star";
+        String toCheck = "STAR";
         //Act
         boolean test_result = testGameRunner.isGoodInput(toCheck);
         //Assert
-        assertFalse(test_result, "Used word <star>. Result should have been false");
+        assertFalse(test_result, "Used word <STAR>. Result should have been false");
     }
     // TODO: Fix this.
     @Test
@@ -44,11 +44,11 @@ public class GameRunnerTests {
     {
         //Arrange
         GameRunner testGameRunner = new GameRunner();
-        String toCheck = "beg1n";
+        String toCheck = "BEG1N";
         //Act
         boolean test_result = testGameRunner.isGoodInput(toCheck);
         //Assert
-        assertFalse(test_result, "Used word <beg1n>. Result should have been false.");
+        assertFalse(test_result, "Used word <BEG1N>. Result should have been false.");
     }
     @Test
     void test_isGoodInput_NULL()
@@ -65,41 +65,41 @@ public class GameRunnerTests {
     void test_isEnglishAndFiveLettersBasic() {
         //Arrange
         GameRunner testGameRunner = new GameRunner();
-        String toCheck = "hello";
+        String toCheck = "HELLO";
         //Act
         boolean test_result = testGameRunner.isEnglishAndFiveLetters(toCheck);
         //Assert
-        assertTrue(test_result, "Used word <hello>. Result should have been true");
+        assertTrue(test_result, "Used word <HELLO>. Result should have been true");
     }
     @Test
     void test_isEnglishAndFiveLetters_DifferentCases() {
         //Arrange
         GameRunner testGameRunner = new GameRunner();
-        String toCheck = "Hello";
+        String toCheck = "HELLO";
         //Act
         boolean test_result = testGameRunner.isEnglishAndFiveLetters(toCheck);
         //Assert
-        assertTrue(test_result, "Used word <Hello>. Result should have been true");
+        assertTrue(test_result, "Used word <HELLO>. Result should have been true");
     }
     @Test
     void test_isEnglishAndFiveLetters_Invalid() {
         //Arrange
         GameRunner testGameRunner = new GameRunner();
-        String toCheck = "gerla";
+        String toCheck = "GERLA";
         //Act
         boolean test_result = testGameRunner.isEnglishAndFiveLetters(toCheck);
         //Assert
-        assertFalse(test_result, "Used word <gerla>. Result should have been true");
+        assertFalse(test_result, "Used word <GERLA>. Result should have been true");
     }
     @Test
     void test_isEnglishAndFiveLetters_NonEnglish() {
         //Arrange
         GameRunner testGameRunner = new GameRunner();
-        String toCheck = "jolie";//"jolie" means happy in French
+        String toCheck = "JOLIE";//"JOLIE" means happy in French
         //Act
         boolean test_result = testGameRunner.isEnglishAndFiveLetters(toCheck);
         //Assert
-        assertFalse(test_result, "Used word <jolie>. Result should have been false");
+        assertFalse(test_result, "Used word <JOLIE>. Result should have been false");
     }
 }
 
