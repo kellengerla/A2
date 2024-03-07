@@ -14,7 +14,7 @@ public class StateTests {
 
     // Test default constructor here
     @Test
-    void test_State_defaultWordIntialization()
+    void test_State_defaultWordInitialization()
     {
         //Arrange
         State state = new State();
@@ -74,7 +74,7 @@ public class StateTests {
     }
     // Test updateState() here
     @Test
-    void test_UpdateState_inputWordNoMatch()
+    void test_updateState_inputWordNoMatch()
     {
         //Arrange
         State state = new State();
@@ -84,7 +84,7 @@ public class StateTests {
         assertArrayEquals(new int [] {0,0,0,0,0}, state.getLetterStatus());
     }
     @Test
-    void test_UpdateState_inputWordPartialMatch1()
+    void test_updateState_inputWordPartialMatch1()
     {
         //Arrange
         State state = new State();
@@ -94,7 +94,7 @@ public class StateTests {
         assertArrayEquals(new int [] {2,2,1,1,0}, state.getLetterStatus());
     }
     @Test
-    void test_UpdateState_inputWordPartialMatch2()
+    void test_updateState_inputWordPartialMatch2()
     {
         //Arrange
         State state = new State();
@@ -104,7 +104,7 @@ public class StateTests {
         assertArrayEquals(new int [] {0,0,2,2,2}, state.getLetterStatus());
     }
     @Test
-    void test_UpdateState_inputWordExactMatch()
+    void test_updateState_inputWordExactMatch()
     {
         //Arrange
         State state = new State();
@@ -115,7 +115,7 @@ public class StateTests {
     }
     // Test hasWin() here
     @Test
-    void test_HasWin_ExactMatch()
+    void test_hasWin_exactMatch()
     {
         //Arrange
         State state = new State();
@@ -126,7 +126,7 @@ public class StateTests {
         assertTrue(hasWin);
     }
     @Test
-    void test_HasWin_PartialMatch()
+    void test_hasWin_partialMatch()
     {
         //Arrange
         State state = new State();
@@ -137,7 +137,7 @@ public class StateTests {
         assertFalse(hasWin);
     }
     @Test
-    void test_HasWin_NoMatch()
+    void test_hasWin_noMatch()
     {
        //Arrange
        State state = new State();
