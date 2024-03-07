@@ -77,7 +77,7 @@ public class StateTests {
         //Arrange
         State state = new State();
         //Act
-        state.updateState("JOLLY"); //Jolly should have no correct letters in it when compared to the variable DEFAULT_WORD which is START
+        state.updateState("JOLLY");
         //Assert
         assertArrayEquals(new int [] {0,0,0,0,0}, state.getLetterStatus());
     }
@@ -100,6 +100,16 @@ public class StateTests {
         state.updateState("HEART");
         //Assert
         assertArrayEquals(new int [] {0,0,2,2,2}, state.getLetterStatus());
+    }
+    @Test
+    void test_UpdateState_inputWordExactMatch()
+    {
+        //Arrange
+        State state = new State();
+        //Act
+        state.updateState("START");
+        //Assert
+        assertArrayEquals(new int [] {2,2,2,2,2}, state.getLetterStatus());
     }
     // Test hasWin() here
 
