@@ -91,6 +91,16 @@ public class StateTests {
         //Assert
         assertArrayEquals(new int [] {2,2,1,1,0}, state.getLetterStatus());
     }
+    @Test
+    void test_UpdateState_inputWordPartialMatch2()
+    {
+        //Arrange
+        State state = new State();
+        //Act
+        state.updateState("HEART");
+        //Assert
+        assertArrayEquals(new int [] {0,0,2,2,2}, state.getLetterStatus());
+    }
     // Test hasWin() here
 
     // Test toString here
