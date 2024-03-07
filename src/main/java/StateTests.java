@@ -148,4 +148,14 @@ public class StateTests {
        assertFalse(hasWin);
     }
     // Test toString here
+    @Test
+    void test_toString_intialState()
+    {
+        //Arrange
+        State state = new State();
+        //Act
+        String stateString = state.toString();
+        //Assert
+        assertEquals("State{secretWord='START', letterStatus=[0, 0, 0, 0, 0]}", stateString);
+    }
 }
