@@ -60,17 +60,18 @@ public class StateTests {
         int [] expectedInputWordStatus = {0,0,0,0,0}; //All elements should be equal to 0, i.e. NO_MATCH
         assertArrayEquals(expectedInputWordStatus, state.getLetterStatus());
     }
-    // Test updateState() here
     @Test
-    void test_UpdateState_updateSecretWord()
+    void test_StateString_inputWordLength()
     {
         //Arrange
-        State state = new State();
+        String inputWord = "SHARK";
         //Act
-        state.updateState("SHARK"); //This is an attempt to change the secret word
+        State state = new State(inputWord);
         //Assert
-        assertEquals("START", state.getSecretWord());
+        assertEquals(5, state.getLetterStatus().length);
     }
+    // Test updateState() here
+
     // Test hasWin() here
 
     // Test toString here
