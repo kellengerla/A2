@@ -149,7 +149,7 @@ public class StateTests {
     }
     // Test toString here
     @Test
-    void test_toString_intialState()
+    void test_toString_initialState()
     {
         //Arrange
         State state = new State();
@@ -167,5 +167,16 @@ public class StateTests {
         String stateString = state.toString();
         //Assert
         assertEquals("State{secretWord='SHARK', letterStatus=[0, 0, 0, 0, 0]}", stateString);
+    }
+    @Test
+    void test_toString_initialStateAfterGuessNoMatch()
+    {
+        //Arrange
+        State state = new State();
+        state.updateState("JOLLY");
+        //Act
+        String stateString = state.toString();
+        //Assert
+        assertEquals("State{secretWord='START', letterStatus=[0, 0, 0, 0, 0]}", stateString);
     }
 }
