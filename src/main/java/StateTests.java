@@ -71,7 +71,16 @@ public class StateTests {
         assertEquals(5, state.getLetterStatus().length);
     }
     // Test updateState() here
-
+    @Test
+    void test_UpdateState_inputWordNoMatch()
+    {
+        //Arrange
+        State state = new State();
+        //Act
+        state.updateState("JOLLY"); //Jolly should have no correct letters in it when compared to the variable DEFAULT_WORD which is START
+        //Assert
+        assertArrayEquals(new int []{0,0,0,0,0}, state.getLetterStatus());
+    }
     // Test hasWin() here
 
     // Test toString here
