@@ -159,16 +159,6 @@ public class StateTests {
         assertEquals("State{secretWord='START', letterStatus=[0, 0, 0, 0, 0]}", stateString);
     }
     @Test
-    void test_toString_customState()
-    {
-        //Arrange
-        State state = new State("SHARK");
-        //Act
-        String stateString = state.toString();
-        //Assert
-        assertEquals("State{secretWord='SHARK', letterStatus=[0, 0, 0, 0, 0]}", stateString);
-    }
-    @Test
     void test_toString_initialStateAfterGuessNoMatch()
     {
         //Arrange
@@ -189,5 +179,26 @@ public class StateTests {
         String stateString = state.toString();
         //Assert
         assertEquals("State{secretWord='START', letterStatus=[2, 2, 1, 1, 0]}", stateString);
+    }
+    @Test
+    void test_toString_initialStateAfterGuessExactMatch()
+    {
+        //Arrange
+        State state = new State();
+        state.updateState("START");
+        //Act
+        String stateString = state.toString();
+        //Assert
+        assertEquals("State{secretWord='START', letterStatus=[2, 2, 2, 2, 2]}", stateString);
+    }
+    @Test
+    void test_toString_customState()
+    {
+        //Arrange
+        State state = new State("SHARK");
+        //Act
+        String stateString = state.toString();
+        //Assert
+        assertEquals("State{secretWord='SHARK', letterStatus=[0, 0, 0, 0, 0]}", stateString);
     }
 }
