@@ -18,9 +18,18 @@ public class State {
              letterStatus[i] = NO_MATCH;
          }
     }
+
+    /**
+     * Allows the secretWord variable to be accessed in the StateTests() class
+     * @return secretWord
+     */
     public String getSecretWord(){
         return secretWord;
     }
+    /**
+     * Allows the letterStatus variable to be accessed in the StateTests() class
+     * @return letterStatus
+     */
     public int [] getLetterStatus(){
         return letterStatus;
     }

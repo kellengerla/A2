@@ -86,14 +86,19 @@ public class GameRunner {
                 }
             }
         }
-
         return isValid;
     }
 
-    public boolean isEnglishAndFiveLetters(String toCheck)
-    {
-        return validWords.contains(toCheck.toLowerCase()) && (toCheck.length() == 5);
+    /**
+     * Checks if a user-inputted word, whether that be the secret word or a guessed word, is an English word and is five letters long
+     * @param toCheck The string that is checked to see if it is an English word and is five letters long
+     * @return inputWord if the user-inputted word is in fact an English word and five letters long
+     */
+    public boolean isEnglishAndFiveLetters(String toCheck) {
+        if (toCheck == null || toCheck.length() != 5) {
+            return false;
+        }
+        String inputWord = toCheck.toLowerCase();
+        return validWords.contains(inputWord);
     }
-
-
 }
